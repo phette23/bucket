@@ -1,4 +1,4 @@
-# Things that are buckets
+# Abridged List of Things that are Buckets
 
 Swimming pools
 Onomatopoeia
