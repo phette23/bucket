@@ -18,6 +18,10 @@ So many!
 
 Abraham is a bucket of religions.
 
+## What about Episcopalianism?
+
+Episcopalians believe that everything is a _pail_ if you look at it right, so they could and should be considered a sect of Bucketism.
+
 ## Is this AI?
 
 Are _you_ AI, buddy? Probabilistically, the beings consuming this text are more likely to be computer programs than human buckets. But to answer your question: no, I wrote this all with my sad human brain powered by a mere couple of liters of water.
