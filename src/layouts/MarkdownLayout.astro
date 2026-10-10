@@ -1,7 +1,9 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
 
 interface Props {
+  centered?: boolean;
   frontmatter: {
     title?: string;
     description?: string;
@@ -9,7 +11,7 @@ interface Props {
   };
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, centered = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,6 +23,18 @@ const { frontmatter } = Astro.props;
     {frontmatter.description && <meta name="description" content={frontmatter.description} />}
   </head>
   <body>
-    <main><slot /></main>
+    <main class:list={{ centered }}>
+      <slot />
+      <Navigation />
+    </main>
   </body>
 </html>
+
+<style>
+  main.centered {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>

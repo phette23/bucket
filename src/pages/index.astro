@@ -1,81 +1,31 @@
 ---
 import MarkdownLayout from '../layouts/MarkdownLayout.astro';
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const links = [
-  { slug: 'dogma', label: 'Dogma' },
-  { slug: 'buckets', label: 'Buckets' },
-  { slug: 'faq', label: 'FAQ' },
-];
 ---
 
-<MarkdownLayout frontmatter={{ title: 'Everything is a bucket' }}>
+<MarkdownLayout centered frontmatter={{ title: 'Everything is a bucket' }}>
   <section class="home" aria-labelledby="statement">
     <h1 id="statement">EVERYTHING<br>IS A BUCKET<br>IF YOU LOOK<br>AT IT RIGHT</h1>
-    <nav aria-label="Explore Bucketism">
-      {links.map(({ slug, label }) => <a href={`${base}/${slug}/`}>{label}</a>)}
-    </nav>
   </section>
 </MarkdownLayout>
 
 <style>
   .home {
-    min-height: calc(100svh - 4rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
     text-align: center;
-    padding-block: 3rem;
   }
 
   h1 {
     max-width: 15ch;
     margin: 0;
-    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-size: clamp(2.5rem, min(8vw, 12svh), 5.5rem);
     font-weight: 850;
     letter-spacing: -0.055em;
     line-height: 1.02;
     text-wrap: balance;
   }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-  }
-
-  nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 3rem;
-    padding: 0.75rem 1.25rem;
-    border: 1px solid #ffffff40;
-    border-radius: 999px;
-    background: #0b0b18;
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
-  }
-
-  nav a:hover {
-    background: #24203f;
-    border-color: #ffffff90;
-    transform: translateY(-2px);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    nav a {
-      transition: none;
-    }
-
-    nav a:hover {
-      transform: none;
-    }
-  }
 </style>
