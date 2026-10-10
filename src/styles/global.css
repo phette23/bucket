@@ -1,0 +1,30 @@
+:root {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 70ch;
+  margin-inline: auto;
+  padding: 2rem 1rem;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+}

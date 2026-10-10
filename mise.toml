@@ -1,0 +1,5 @@
+[tools]
+node = "26"
+
+[env]
+ASTRO_TELEMETRY_DISABLED = "1"

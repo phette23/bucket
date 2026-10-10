@@ -1,0 +1,10 @@
+---
+import { Content, frontmatter, rawContent } from '../../readme.md';
+import MarkdownLayout from '../layouts/MarkdownLayout.astro';
+
+const title = frontmatter.title ?? rawContent().match(/^#\s+(.+)$/m)?.[1];
+---
+
+<MarkdownLayout frontmatter={{ ...frontmatter, title }}>
+  <Content />
+</MarkdownLayout>
