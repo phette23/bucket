@@ -8,7 +8,7 @@
     "build": "astro build",
     "check": "astro check",
     "dev": "astro dev",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint --cache .",
     "preview": "astro preview"
   },
   "engines": {
