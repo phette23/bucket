@@ -14,6 +14,7 @@ body {
   margin: 0;
   min-height: 100svh;
   isolation: isolate;
+  overflow-wrap: anywhere;
 }
 
 body::before,
@@ -28,8 +29,7 @@ body::after {
 body::before {
   background:
     radial-gradient(ellipse at 15% 20%, #221239 0%, transparent 65%),
-    radial-gradient(ellipse at 85% 80%, #0c2541 0%, transparent 65%),
-    #050509;
+    radial-gradient(ellipse at 85% 80%, #0c2541 0%, transparent 65%), #050509;
 }
 
 body::after {
@@ -40,8 +40,12 @@ body::after {
 }
 
 @keyframes gradient-pulse {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -62,6 +66,7 @@ a:focus-visible {
 }
 
 main {
+  width: 100%;
   max-width: 70ch;
   margin-inline: auto;
   padding: 2rem 1rem;
@@ -75,5 +80,6 @@ video {
 
 pre {
   overflow-x: auto;
+  overflow-wrap: normal;
   padding: 1rem;
 }

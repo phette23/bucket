@@ -1,32 +1,33 @@
 ---
-import type { MarkdownInstance } from 'astro';
-import MarkdownLayout from '../layouts/MarkdownLayout.astro';
+import type { MarkdownInstance } from 'astro'
+import MarkdownLayout from '../layouts/MarkdownLayout.astro'
 
 interface Frontmatter {
-  title?: string;
-  description?: string;
-  lang?: string;
+  title?: string
+  description?: string
+  lang?: string
 }
 
 export function getStaticPaths() {
   const pages = import.meta.glob<MarkdownInstance<Frontmatter>>(
     '../../content/**/*.md',
     { eager: true },
-  );
+  )
 
   return Object.entries(pages).map(([path, page]) => ({
     params: { slug: path.replace('../../content/', '').replace(/\.md$/, '') },
     props: { page },
-  }));
+  }))
 }
 
 interface Props {
-  page: MarkdownInstance<Frontmatter>;
+  page: MarkdownInstance<Frontmatter>
 }
 
-const { page } = Astro.props;
-const { Content } = page;
-const title = page.frontmatter.title ?? page.rawContent().match(/^#\s+(.+)$/m)?.[1];
+const { page } = Astro.props
+const { Content } = page
+const title =
+  page.frontmatter.title ?? page.rawContent().match(/^#\s+(.+)$/m)?.[1]
 ---
 
 <MarkdownLayout frontmatter={{ ...page.frontmatter, title }}>

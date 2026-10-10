@@ -1,16 +1,18 @@
 ---
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const current = Astro.url.pathname.replace(/\/+$/, '');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+const current = Astro.url.pathname.replace(/\/+$/, '')
 const links = ['Home', 'Dogma', 'Buckets', 'FAQ'].map((label) => ({
   label,
   href: `${base}${label === 'Home' ? '' : `/${label.toLowerCase()}`}`,
-}));
+}))
 ---
 
 <nav aria-label="Site navigation">
-  {links.filter(({ href }) => href !== current).map(({ href, label }) => (
-    <a href={`${href}/`}>{label}</a>
-  ))}
+  {links
+    .filter(({ href }) => href !== current)
+    .map(({ href, label }) => (
+      <a href={`${href}/`}>{label}</a>
+    ))}
 </nav>
 
 <style>
@@ -35,7 +37,10 @@ const links = ['Home', 'Dogma', 'Buckets', 'FAQ'].map((label) => ({
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
-    transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+    transition:
+      background 200ms ease,
+      border-color 200ms ease,
+      transform 200ms ease;
   }
 
   nav a:hover {

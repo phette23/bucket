@@ -1,11 +1,18 @@
 ---
-import MarkdownLayout from '../layouts/MarkdownLayout.astro';
-
+import MarkdownLayout from '../layouts/MarkdownLayout.astro'
 ---
 
 <MarkdownLayout centered frontmatter={{ title: 'Everything is a bucket' }}>
   <section class="home" aria-labelledby="statement">
-    <h1 id="statement">EVERYTHING<br>IS A BUCKET<br>IF YOU LOOK<br>AT IT RIGHT</h1>
+    <h1 id="statement">
+      EVERYTHING
+      <br />
+      IS A BUCKET
+      <br />
+      IF YOU LOOK
+      <br />
+      AT IT RIGHT
+    </h1>
   </section>
 </MarkdownLayout>
 
@@ -21,11 +28,10 @@ import MarkdownLayout from '../layouts/MarkdownLayout.astro';
   h1 {
     max-width: 15ch;
     margin: 0;
-    font-size: clamp(2.5rem, min(8vw, 12svh), 5.5rem);
+    font-size: clamp(1.5rem, min(8vw, 12svh), 5.5rem);
     font-weight: 850;
     letter-spacing: -0.055em;
     line-height: 1.02;
     text-wrap: balance;
   }
-
 </style>
