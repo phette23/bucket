@@ -32,6 +32,12 @@ const { frontmatter, centered = false } = Astro.props
   </body>
 </html>
 
+<script>
+  import { animateHeadingColors } from '../scripts/heading-colors'
+
+  animateHeadingColors()
+</script>
+
 <style>
   main.centered {
     min-height: 100svh;
