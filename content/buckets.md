@@ -3,11 +3,21 @@
 - Swimming pools
 - Onomatopoeia
 - Queen Elizabeth II before and after her death
-- The Marshall Islands
+- Aelōn̄ Kein Ad (The Marshall Islands)
 - Phenomenology
 - People named Greg
 - Picnic tables
 - Beethoven's 5th Symphony and the song "Peaches" by the Presidents of the United States of America
-- Nuance
+- Nuance (obviously)
 - Donuts
+- Mysticism, Pragmatism, and the conceptual distance between the two
+- Chonky Donkeys
+- Holes ("A hole is merely a bucket whose bottom is unknowable" to quote one of our most esteemed theologians)
+- The Natural History Museum
+- The Zymoglyphic Museum
+- Blue Heat Takis
+- A single drop of rain on an otherwise arid day
+- Transcendentalism
+- The excised secrets lurking under black bars in censored government documents
+- All you've ever dreamed of developing into like a flower unfolding in the light of an ineffably perfect autumn
 - Et cetera
