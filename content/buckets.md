@@ -3,7 +3,7 @@
 - Swimming pools
 - Onomatopoeia
 - Queen Elizabeth II before and after her death
-- Aelōn̄ Kein Ad (The Marshall Islands)
+- Aelōn̄ Kein Ad (a.k.a. The Marshall Islands)
 - Phenomenology
 - People named Greg
 - Picnic tables
@@ -20,4 +20,5 @@
 - Transcendentalism
 - The excised secrets lurking under black bars in censored government documents
 - All you've ever dreamed of developing into like a flower unfolding in the light of an ineffably perfect autumn
+- The Scenic Kancamagus Highway
 - Et cetera

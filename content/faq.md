@@ -22,10 +22,16 @@ Abraham is a bucket of religions.
 
 Episcopalians believe that everything is a _pail_ if you look at it right, so they could and should be considered a sect of Bucketism.
 
+## Do you have any hymns/prayers?
+
+So glad you asked!
+
+> Our Bucket, who art in bucket, hallowed be thy bucket
+> thy bucket come, thy bucket be done, on bucket as it is in bucket
+> Give us this bucket our daily bucket
+> Bucket bucket bucket
+> Ahem
+
 ## Is this a cult?
 
 Oh absolutely but it's one of the _good_ cults.
-
-## Is this AI?
-
-Are _you_ AI, buddy? Probabilistically, the beings consuming this text are more likely to be computer programs than human buckets. But to answer your question: no, I wrote this text with my sad human brain powered by a mere couple of liters of water. If I'm honest, yes, AI figured out some of the stupid heading coloring that I am too dumb to do. I am a religious leader, not a typographist.
