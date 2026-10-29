@@ -6,7 +6,7 @@ export default defineConfig({
   webServer: {
     command:
       'pnpm exec astro preview --host 127.0.0.1 --port 4322 --ignore-lock',
-    url: 'http://127.0.0.1:4322/bucket/',
+    url: 'http://127.0.0.1:4322/',
     reuseExistingServer: false,
   },
 })

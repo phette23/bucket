@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test'
 test('animates individual letters in order while preserving headings and line breaks', async ({
   page,
 }) => {
-  await page.goto('/bucket/')
+  await page.goto('/')
   const heading = page.getByRole('heading', { level: 1 })
   await expect(heading).toHaveAttribute('data-color-wave', 'ready')
   await expect(heading).toHaveAccessibleName(
@@ -32,7 +32,7 @@ test('animates individual letters in order while preserving headings and line br
 test('letters change through the palette, then pause together before repeating', async ({
   page,
 }) => {
-  await page.goto('/bucket/dogma/')
+  await page.goto('/dogma/')
   await expect(page.locator('h1')).toHaveAttribute('data-color-wave', 'ready')
   const samples = await page
     .locator('.heading-letter')
@@ -70,7 +70,7 @@ test('reduced motion displays static colors and responds to preference changes',
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.goto('/bucket/faq/')
+  await page.goto('/faq/')
   await expect(page.locator('h1')).toHaveAttribute('data-color-wave', 'ready')
   const letters = page.locator('.heading-letter')
   expect(await letters.count()).toBe(3)
@@ -100,7 +100,7 @@ test('reduced motion displays static colors and responds to preference changes',
 test('headings remain readable without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false })
   const page = await context.newPage()
-  await page.goto('/bucket/dogma/')
+  await page.goto('/dogma/')
   await expect(page.getByRole('heading', { name: 'Dogma' })).toBeVisible()
   await expect(page.locator('.heading-letter')).toHaveCount(0)
   await context.close()

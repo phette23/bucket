@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config'
 import { unified } from '@astrojs/markdown-remark'
 import markdownLinks from './src/remark-markdown-links.mjs'
 
-const base = '/bucket'
+const base = '/'
 
 export default defineConfig({
   site: 'http://bucket.church',

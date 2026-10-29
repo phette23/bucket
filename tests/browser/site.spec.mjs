@@ -8,7 +8,7 @@ for (const width of [320, 375, 768, 1280]) {
   }) => {
     await page.setViewportSize({ width, height: width === 1280 ? 720 : 667 })
     for (const route of routes) {
-      const response = await page.goto(`/bucket/${route}`)
+      const response = await page.goto(`/${route}`)
       expect(response.status()).toBe(200)
       await expect(page).toHaveTitle(/\S/)
       await expect(page.locator('h1')).toHaveCount(1)
@@ -25,7 +25,7 @@ for (const width of [320, 375, 768, 1280]) {
         expect(box.height).toBeGreaterThanOrEqual(44)
         expect(box.width).toBeGreaterThanOrEqual(44)
         const href = await link.getAttribute('href')
-        expect(href).toMatch(/^\/bucket\//)
+        expect(href).toMatch(/^\/(?:dogma\/|buckets\/|faq\/)?$/)
         expect((await page.request.get(href)).status()).toBe(200)
       }
     }
@@ -33,11 +33,11 @@ for (const width of [320, 375, 768, 1280]) {
 }
 
 test('Markdown links reach the intended pages', async ({ page }) => {
-  await page.goto('/bucket/faq/')
+  await page.goto('/faq/')
   await page
     .getByRole('link', { name: 'Abridged List of Things that are Buckets' })
     .click()
-  await expect(page).toHaveURL(/\/bucket\/buckets\/$/)
+  await expect(page).toHaveURL(/\/buckets\/$/)
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(
     'Abridged List of Things that are Buckets',
   )
@@ -46,7 +46,7 @@ test('Markdown links reach the intended pages', async ({ page }) => {
 test('long content and enlarged text fit narrow screens', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 })
   for (const route of ['', 'faq/']) {
-    await page.goto(`/bucket/${route}`)
+    await page.goto(`/${route}`)
     await page.addStyleTag({ content: 'html { font-size: 32px; }' })
     await page.locator('main').evaluate((main) => {
       const paragraph = document.createElement('p')
@@ -63,7 +63,7 @@ test('long content and enlarged text fit narrow screens', async ({ page }) => {
 
 test('reduced motion disables the background animation', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.goto('/bucket/')
+  await page.goto('/')
   expect(
     await page
       .locator('body')
