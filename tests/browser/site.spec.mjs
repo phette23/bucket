@@ -1,6 +1,45 @@
 import { test, expect } from '@playwright/test'
+import { URL } from 'node:url'
 
 const routes = ['', 'dogma/', 'buckets/', 'faq/']
+
+const destinations = [
+  { label: 'Home', path: '/' },
+  { label: 'Dogma', path: '/dogma/' },
+  { label: 'Buckets', path: '/buckets/' },
+  { label: 'FAQ', path: '/faq/' },
+]
+
+for (const source of destinations) {
+  test(`${source.label} navigation reaches exact root URLs, including Home`, async ({
+    page,
+    baseURL,
+  }) => {
+    for (const destination of destinations) {
+      if (destination.path === source.path) {
+        continue
+      }
+
+      await page.goto(source.path)
+      const link = page
+        .getByRole('navigation')
+        .getByRole('link', { name: destination.label, exact: true })
+      await expect(link).toHaveAttribute('href', destination.path)
+      await link.click()
+      await expect(page).toHaveURL(new URL(destination.path, baseURL).href)
+      await expect(page.locator('h1')).toBeVisible()
+    }
+  })
+
+  test(`${source.label} built HTML has no legacy bucket prefix`, async ({
+    request,
+  }) => {
+    const response = await request.get(source.path)
+    expect(response.status()).toBe(200)
+    const html = await response.text()
+    expect(html).not.toMatch(/(?:href|src)=["'][^"']*\/bucket(?:\/|["'?#])/i)
+  })
+}
 
 for (const width of [320, 375, 768, 1280]) {
   test(`pages fit a ${width}px viewport and navigation works`, async ({
