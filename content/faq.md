@@ -27,9 +27,13 @@ Episcopalians believe that everything is a _pail_ if you look at it right, so th
 So glad you asked!
 
 > Our Bucket, who art in bucket, hallowed be thy bucket
+>
 > thy bucket come, thy bucket be done, on bucket as it is in bucket
+>
 > Give us this bucket our daily bucket
+>
 > Bucket bucket bucket
+>
 > Ahem
 
 ## Is this a cult?
