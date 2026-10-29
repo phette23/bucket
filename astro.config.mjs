@@ -5,7 +5,7 @@ import markdownLinks from './src/remark-markdown-links.mjs'
 const base = '/bucket'
 
 export default defineConfig({
-  site: 'https://phette23.github.io',
+  site: 'http://bucket.church',
   base,
   output: 'static',
   markdown: {
