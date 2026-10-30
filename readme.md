@@ -1,3 +1,3 @@
-# EiaBiulair Website
+# bucket.church
 
 🪣
